@@ -13,8 +13,10 @@ fn main() {
     println!("Trying to open {} now.", path);
     let f = File::open(path).unwrap();
     let file = shn::ShnReader::read_from(f, encoding::all::UTF_8).ok().unwrap();
+    println!("{:#?}", file.schema);
+    stdin().read_line(&mut String::new()).ok();
     for r in file.data.iter() {
-        println!("{:?}", r);
+        println!("{:#?}", r.data);
         stdin().read_line(&mut String::new()).ok();
     }
 }
