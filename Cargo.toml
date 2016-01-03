@@ -1,0 +1,8 @@
+[package]
+name = "shn-test"
+version = "0.1.0"
+authors = ["skeleten <janpelle.thomson@stud.tu-darmstadt.de>"]
+
+[dependencies]
+shn = { path = "../shn-rs" }
+encoding = "*"
